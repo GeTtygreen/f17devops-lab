@@ -29,8 +29,8 @@ app.get('/',(req, res) => {
 try{
      messItUp();
 
-}catch(error){
-    console.error(error)
+}catch(err){
+    console.log("NOW YOU KNOW YOURE WRONG" + err.stack);
 }
 })
 
