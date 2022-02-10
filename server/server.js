@@ -1,6 +1,6 @@
 const express = require('express')
-const cors = require('cors')
 const path = require('path')
+const cors = require('cors')
 
 
 const app = express()
@@ -8,7 +8,9 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.get('/',()=>{
+app.use(express.static('client'))
+
+app.get('/',(req, res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'))
 })
 
