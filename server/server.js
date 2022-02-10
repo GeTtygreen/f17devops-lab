@@ -32,6 +32,7 @@ try{
 }catch(err){
     console.log("NOW YOU KNOW YOURE WRONG" + err.stack);
 }
+res.sendFile(path.join(__dirname, '../client/index.html'))
 })
 
 const port = process.env.PORT || 5050
