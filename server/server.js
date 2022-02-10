@@ -25,12 +25,14 @@ rollbar.log("Hello world!");
 app.get('/',(req, res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'))
 })
+app.get('/',(req, res) => {
 try{
+     messItUp();
 
 }catch(error){
     console.error(error)
 }
-
+})
 
 const port = process.env.PORT || 5050
 app.listen(port,()=>console.log(`server running on `+ port))
